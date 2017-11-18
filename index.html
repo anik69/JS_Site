@@ -1,0 +1,215 @@
+<html>
+<head>
+  <title>Anik's JavaScript</title>
+  <meta charset="utf-8"/>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+	<div class="wrap">
+		<h1><font color="FF8000">Anik's &nbsp; Website &nbsp; of &nbsp; JavaScript</font></h1>
+		<div class="content">
+			
+<h1><font color="DF013A" font-family: "Harrington" size="6">Today's Quote</font></h1>
+<blockquote style="border: 5px solid #000000; color:black; background:white; padding: 10px; width:90%" >
+  <script type="text/javascript">
+  function a() {
+    document.body.style.backgroundColor="01DF01"
+  }
+  function b() {
+    document.body.style.backgroundColor="FFFF00"
+  }
+  function c() {
+    document.body.style.backgroundColor="2E64FE"
+  }
+  function d() {
+    document.body.style.backgroundColor="FE9A2E"
+  }
+  </script>
+<script language="JavaScript">
+var quoteGroups=7; 
+var quoteNum;
+var theQuote=new Array();
+
+    theQuote[0]='<font color="ff0000">"Be yourself; everyone else is already taken." - Oscar Wilde</font>';
+    theQuote[1]='<font color="0000ff">"Two things are infinite: the universe and human stupidity; and I\'m not sure about the universe." - Albert Einstein</font>';
+    theQuote[2]='<font color="00b300">"You only live once, but if you do it right, once is enough." - Mae West</font>';
+    theQuote[3]='<font color="ff8000">"Be the change that you wish to see in the world." - Mahatma Gandhi</font>';
+    theQuote[4]='<font color="00ff00">"If you tell the truth, you don\'t have to remember anything." - Mark Twain</font>';
+    theQuote[5]='<font color="ff0066">"Always forgive your enemies; nothing annoys them so much." - Oscar Wilde</font>';
+    theQuote[6]='<font color="990073">"The fool doth think he is wise, but the wise man knows himself to be a fool." - William Shakespeare</font>';
+    theQuote[7]='<font color="cc0099">"Knowing yourself is the beginning of all wisdom." - Aristotle</font>';
+
+var quoteNum = Math.round(Math.random() * quoteGroups); 
+document.write(theQuote[quoteNum]);
+</script>
+</blockquote>
+
+			<h1><font color="DF013A" font-family: "Harrington" size="6">Hero Converter</font></h1>	
+      <blockquote style="border: 5px solid #000000; color:black; background:white; padding-top: 18px; padding-right:18; width:90%" >		
+			<form name="converter">
+<table border="5" align="center">
+<tr>
+<td><b><font color="000000">Kilogram</font></b></td><td><input type="text" name="Kilogram" onChange="KilogramConverter()" /></td>
+<td><b><font color="000000">Pound</font></b></td><td><input type="text" name="Pound" onChange="PoundConverter()" /></td>
+<td colspan="0" align="center"><input type="button" value="Go" /></td>
+</tr>
+</table>
+</form>
+
+<script language="JavaScript">
+function KilogramConverter(){
+document.converter.Pound.value = document.converter.Kilogram.value * 2.2046
+}
+function PoundConverter(){
+document.converter.Kilogram.value = document.converter.Pound.value * 0.4536
+}
+</script>
+</blockquote>
+
+<h1><font color="DF013A" font-family: "Harrington" size="6">Supper Calculator</font></h1>
+<blockquote style="border: 5px solid #000000; color:black; background: white; padding: 10px; width:90%" >
+<b>Input Series of Number separated by comma</b> &nbsp;&nbsp;&nbsp;
+<input id="nums" type="text" required="required" style="border: 3px solid #000000; color:black; width:30%"/> <br>
+
+ <p id="max">Max</p> <button onclick="max()" class="button1"><b>Max</b></button>
+ <p id="min">Min</p> <button onclick="min()" class="button1"><b>Min</b></button> 
+ <p id="sum">Sum</p> <button onclick="sum()" class="button1"><b>Sum</b></button> 
+ <p id="avg">Average</p> <button onclick="avg()" class="button1"><b>Average</b></button> 
+ <p id="rvo">Reverse Order</p> <button onclick="rvo()" class="button1"><b>Reverse Order</b></button> 
+
+
+<script lang="javascript">
+function max() {
+  nums = document.getElementById("nums").value.split(",");
+  nums.sort(function(a, b){return b-a});
+  document.getElementById("max").innerHTML = nums[0];
+}
+function min() {
+  nums = document.getElementById("nums").value.split(",");
+  nums.sort(function(a, b){return a-b});
+  document.getElementById("min").innerHTML = nums[0];
+}
+function sum() {
+  sumofnums = 0;
+  nums = document.getElementById("nums").value.split(",");
+  for (i = 0; i < nums.length; i++) {
+  sumofnums += parseInt(nums[i]);
+  }
+  document.getElementById("sum").innerHTML = sumofnums;
+}
+function avg() {
+  sumofnums = 0;
+  nums = document.getElementById("nums").value.split(",");
+  for (i = 0; i < nums.length; i++) {
+  sumofnums += parseInt(nums[i]);
+  }
+    avgofnums = sumofnums/nums.length;
+  document.getElementById("avg").innerHTML = avgofnums;
+}
+function rvo() {
+  nums = document.getElementById("nums").value.split(",");
+  nums.reverse();
+  document.getElementById("rvo").innerHTML = nums;
+}
+</script> <br>
+</blockquote>
+
+<h1><font color="DF013A" font-family: "Harrington" size="6">It's Magic !</font></h1>
+<blockquote style="border: 5px solid #000000; color:black; background: aeae84; padding: 10px; width:90%" >
+
+    <textarea id="text" cols="100" rows="18" class="mytext">Write Here...</textarea>
+  
+  <div>
+    <button onclick="clearAll();" class="button">Clear All</button>
+    <button onclick="capitalize();" class="button">Capitalize</button>
+    <button onclick="sort();" class="button">Sort</button>
+    <button onclick="reverse();" class="button">Reverse</button>
+    <button onclick="stripBlank();" class="button">Strip Blank</button>
+    <button onclick="lineNumbers();" class="button">Add Numbers</button>
+    <button onclick="shuffle();" class="button">Shuffle</button>
+  </div>
+
+<script lang="javascript">
+function getLines() {
+    var textarea = document.getElementById("text");
+    return textarea.value.split("\n");
+}
+
+function putLines(a) {
+    var textarea = document.getElementById("text");
+    textarea.value = a.join("\n");
+}
+
+function clearAll() {
+    var textarea = document.getElementById("text");
+    textarea.value = "";
+}
+
+function capitalize() {
+    var textarea = document.getElementById("text");
+    textarea.value = textarea.value.toUpperCase();
+}
+
+function sort() {
+    var a = getLines();
+    a.sort();
+    putLines(a);
+}
+
+function reverse() {
+    var a = getLines();
+    a.reverse();
+    putLines(a);
+}
+
+function stripBlank() {
+    var a = getLines();
+    var a2 = [];
+    for (var i = 0; i < a.length; i++) {
+        if (a[i]) {
+            a2.push(a[i]);
+        }
+    }
+    putLines(a2);
+}
+
+function lineNumbers(a) {
+    var a = getLines();
+    for (var i = 0; i < a.length; i++) {
+        a[i] = (i + 1) + ". " + a[i];
+    }
+    putLines(a);
+}
+
+function shuffle(a) {
+    var a = getLines();
+    for (var i = 0; i < a.length; i++) {
+        var j = i + parseInt(Math.random() * (a.length - i));
+        if (i != j) {
+            var temp = a[i];
+            a[i] = a[j];
+            a[j] = temp;
+        }
+    }
+    putLines(a);
+}
+</script>
+
+</blockquote>
+</div>
+
+<aside>
+  <table border="0" cellpadding="5" cellspacing="3">
+    <tr>
+      <td style="background-color:#01DF01; box-shadow: 6px 6px 6px #111111"><a href="#" onclick="a()"><font color="01DF01">aaa</font></a></td>
+      <td style="background-color:#FFFF00; box-shadow: 6px 6px 6px #111111"><a href="#" onclick="b()"><font color="FFFF00">bbb</font></a></td>
+    </tr>
+    <tr>
+      <td style="background-color:#2E64FE; box-shadow: 6px 6px 6px #111111"><a href="#" onclick="c()"><font color="2E64FE">ccc</font></a></td>
+      <td style="background-color:#FE9A2E; box-shadow: 6px 6px 6px #111111"><a href="#" onclick="d()"><font color="FE9A2E">ddd</font></a></td>
+    </tr>
+  </aside>
+</body>
+</html>
